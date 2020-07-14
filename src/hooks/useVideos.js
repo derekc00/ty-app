@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import youtube from "../apis/youtube";
 
 const KEY = "AIzaSyDFFpC6Tv__b3xM5l3XSslWn7lpyxIqR6g";
@@ -18,7 +18,7 @@ const useVideos = (defaultSearchTerm) => {
         part: "snippet",
         maxResults: 5,
         key: KEY,
-        type: "${KEY}",
+        type: `${KEY}`,
       },
     });
     setVideos(response.data.items);
